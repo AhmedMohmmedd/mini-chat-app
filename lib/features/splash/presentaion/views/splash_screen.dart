@@ -1,3 +1,4 @@
+import 'package:chatdemo/features/auth/presentaion/views/login_screen.dart';
 import 'package:chatdemo/features/home/presentaion/views/home_screen.dart';
 import 'package:chatdemo/features/splash/presentaion/views/widgets/splash_screen_body.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,7 @@ class _MyWidgetState extends State<SplashScreen> {
       () {
         Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) {
-          return const HomeScreen();
+          return const LoginScreen();
         }));
       },
     );

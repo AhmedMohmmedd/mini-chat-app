@@ -1,5 +1,5 @@
 
-import 'package:chatdemo/core/theming/text_styels.dart';
+import 'package:chatdemo/core/theming/app_styels.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreenBody extends StatelessWidget {
