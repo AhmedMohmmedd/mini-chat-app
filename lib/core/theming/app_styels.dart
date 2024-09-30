@@ -5,7 +5,7 @@ abstract class AppStyles {
     return const TextStyle(
         color: Colors.black,
         fontWeight: FontWeight.w400,
-        fontSize:14,
+        fontSize:16,
         // fontFamily: 'Montserrat'
         );
   }}
