@@ -1,4 +1,5 @@
 
+import 'package:chatdemo/core/constants/asset_images.dart';
 import 'package:chatdemo/core/theming/app_styels.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class SplashScreenBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assets/images/logo 1.png',
+            AssetImages.logo,
             fit: BoxFit.fill,
           ),
           const SizedBox(
