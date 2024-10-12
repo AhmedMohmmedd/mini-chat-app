@@ -1,4 +1,5 @@
 import 'package:chatdemo/features/home/presentaion/views/home_screen.dart';
+import 'package:chatdemo/features/splash/presentaion/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,10 +17,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
        textTheme: GoogleFonts.interTextTheme(),
       ),
-      home: const HomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }
