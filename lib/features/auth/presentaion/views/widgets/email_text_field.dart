@@ -1,10 +1,10 @@
 import 'package:chatdemo/core/shared_widgets/dafault_text.dart';
 import 'package:flutter/material.dart';
 
-class EmailField extends StatelessWidget {
+class EmailTextField extends StatelessWidget {
   final TextEditingController emailController;
 
-  const EmailField({required this.emailController, super.key});
+  const EmailTextField({required this.emailController, super.key});
 
   @override
   Widget build(BuildContext context) {
