@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 
 class LoginTitle extends StatelessWidget {
   const LoginTitle({
-    super.key,
+    super.key, required this.text,
   });
-
+final String text;
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Log in to your account',
+      text,
       style: AppStyles.textStyle24,
     );
   }
