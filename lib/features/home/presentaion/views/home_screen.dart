@@ -1,3 +1,4 @@
+import 'package:chatdemo/features/home/presentaion/views/widgets/home_screen_body.dart';
 import 'package:flutter/material.dart';
 import 'package:chatdemo/core/shared_widgets/custom_app_bar.dart';
 import 'package:chatdemo/core/theming/app_color.dart';
@@ -12,7 +13,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int index = 0;
   final pages = const [
-    SizedBox(),
+    HomeScreenBody(),
     SizedBox(),
     SizedBox(),
   ];

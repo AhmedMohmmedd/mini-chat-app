@@ -10,12 +10,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: Colors.white,
       title: Text(
         'WhatsUp',
         style: AppStyles.textStyle24,
       ),
       centerTitle: true,
-      elevation: .3,
+      elevation: .1,
       actions: [
         const Icon(Icons.search),
         SizedBox(
