@@ -1,4 +1,5 @@
 import 'package:chatdemo/features/home/presentaion/views/home_screen.dart';
+import 'package:chatdemo/features/profile/presentaion/views/profile_screen.dart';
 import 'package:chatdemo/features/splash/presentaion/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

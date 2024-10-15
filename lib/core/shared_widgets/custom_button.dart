@@ -31,35 +31,26 @@ class CustomButton extends StatelessWidget {
     return Center(
       child: SizedBox(
         width: double.infinity,
-        // height: 50,
         child: ElevatedButton(
           onPressed: func,
           style: ElevatedButton.styleFrom(
-            // minimumSize: const Size(double.infinity, 0),
             backgroundColor: AppColor.primeryColor,
             padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 12),
             shape: RoundedRectangleBorder(
                borderRadius: borderRadius ?? BorderRadius.circular(24),
             ),
-            // minimumSize: Size(150, 50),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
-                child: isLoading
-                ? const CircularProgressIndicator()
-                :Text(
+              child:  Text(
                   text,
                   style: AppStyles.textStyle24.copyWith(
                     color: textColor ?? Colors.black,
                   ),
                 ),
               ),
-              const SizedBox(width: 15),
-              if (svgPicture != null) ...[
-                svgPicture!, // Render SVG only if it's provided // Add some spacing between SVG and text
-              ],
             ],
           ),
         ),
