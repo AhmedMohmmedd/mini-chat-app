@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         textTheme: GoogleFonts.interTextTheme(),
       ),
-      home: const SplashScreen(),
+      home: const HomeScreen(),
     );
   }
 }
