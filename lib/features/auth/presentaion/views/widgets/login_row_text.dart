@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:chatdemo/core/theming/app_color.dart';
 import 'package:chatdemo/core/theming/app_styels.dart';
+import 'package:chatdemo/features/auth/presentaion/views/login_screen.dart';
 import 'package:chatdemo/features/auth/presentaion/views/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ class LogInRowText extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const SignUpScreen(),
+                builder: (context) => const LoginScreen(),
               ),
             );
           },
