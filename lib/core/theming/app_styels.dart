@@ -10,6 +10,11 @@ abstract class AppStyles {
         // fontFamily: 'Montserrat'
         );
   }
+  static TextStyle textStyle14 = const TextStyle(
+    color: Colors.black,
+    fontSize: 24,
+    fontWeight: FontWeight.w300, 
+  );
   static TextStyle textStyle24 = const TextStyle(
     color: Colors.black,
     fontSize: 24,
