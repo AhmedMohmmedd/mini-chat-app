@@ -38,13 +38,18 @@ class CustomButton extends StatelessWidget {
                borderRadius: borderRadius ?? BorderRadius.circular(24),
             ),
           ),
-          child: Center(
-            child: Text(
-              text,
-              style: AppStyles.textStyle24.copyWith(
-                color: textColor ?? Colors.black,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+              child:  Text(
+                  text,
+                  style: AppStyles.textStyle24.copyWith(
+                    color: textColor ?? Colors.black,
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
         ),
       ),
