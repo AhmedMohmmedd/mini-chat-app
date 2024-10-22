@@ -1,3 +1,5 @@
+import 'package:chatdemo/core/theming/app_color.dart';
+import 'package:chatdemo/features/home/presentaion/views/widgets/custom_chat_item.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreenBody extends StatelessWidget {
@@ -5,6 +7,20 @@ class HomeScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: ListView.builder(
+          itemCount: 4,
+          itemBuilder: (context, index) {
+            return const CustomChatItem();
+          }),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: AppColor.primeryColor,
+        child: const Icon(
+          Icons.chat,
+          color: Colors.white,
+        ),
+        onPressed: () {},
+      ),
+    );
   }
 }
