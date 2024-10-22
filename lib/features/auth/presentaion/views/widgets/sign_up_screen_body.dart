@@ -1,29 +1,29 @@
-import 'package:chatdemo/core/constants/asset_images.dart';
-import 'package:chatdemo/core/shared_widgets/custom_button.dart';
-import 'package:chatdemo/core/theming/app_styels.dart';
 import 'package:chatdemo/features/auth/presentaion/views/widgets/custom_logo_widget.dart';
 import 'package:chatdemo/features/auth/presentaion/views/widgets/email_text_field.dart';
-import 'package:chatdemo/features/auth/presentaion/views/widgets/login_button.dart';
+import 'package:chatdemo/features/auth/presentaion/views/widgets/login_row_text.dart';
+import 'package:chatdemo/features/auth/presentaion/views/widgets/login_screen_body.dart';
 import 'package:chatdemo/features/auth/presentaion/views/widgets/login_titel.dart';
+import 'package:chatdemo/features/auth/presentaion/views/widgets/name_text_field.dart';
 import 'package:chatdemo/features/auth/presentaion/views/widgets/password_text_field.dart';
-import 'package:chatdemo/features/auth/presentaion/views/widgets/register_row_text.dart';
-import 'package:chatdemo/features/home/presentaion/views/home_screen.dart';
+import 'package:chatdemo/features/auth/presentaion/views/widgets/phone_text_field.dart';
+import 'package:chatdemo/features/auth/presentaion/views/widgets/register_button.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
-class LoginScreenBody extends StatefulWidget {
-  const LoginScreenBody({super.key});
+class SignUpScreenBody extends StatefulWidget {
+  const SignUpScreenBody({super.key});
 
   @override
-  State<LoginScreenBody> createState() => _LoginScreenBodyState();
+  State<SignUpScreenBody> createState() => _SignUpScreenBodyState();
 }
 
 TextEditingController emailController = TextEditingController();
+TextEditingController nameController = TextEditingController();
+TextEditingController phoneController = TextEditingController();
 TextEditingController passwordController = TextEditingController();
 bool isPasswordVisible = false;
 var formKey = GlobalKey<FormState>();
 
-class _LoginScreenBodyState extends State<LoginScreenBody> {
+class _SignUpScreenBodyState extends State<SignUpScreenBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -33,20 +33,31 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
         child: Center(
           child: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const CustomLogoWidget(),
                 const SizedBox(
                   height: 14,
                 ),
                 const LoginTitle(
-                  text: 'Log in to your account',
+                  text: 'Register to your account',
                 ),
                 const SizedBox(
                   height: 20,
                 ),
+                NameTextField(
+                  nameController: nameController,
+                ),
+                const SizedBox(
+                  height: 14,
+                ),
                 EmailTextField(
                   emailController: emailController,
+                ),
+                const SizedBox(
+                  height: 14,
+                ),
+                PhoneTextField(
+                  phoneController: phoneController,
                 ),
                 const SizedBox(
                   height: 14,
@@ -63,12 +74,14 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                 const SizedBox(
                   height: 24,
                 ),
-                LoginButton(
-                  emailController: emailController,
+                RegisterButton(
+                  nameController: nameController,
                   passwordController: passwordController,
+                  phoneController: phoneController,
+                  emailController: emailController,
                 ),
                 const SizedBox(height: 20),
-                const RegisterRowText(),
+                const LogInRowText(),
               ],
             ),
           ),
