@@ -16,7 +16,7 @@ class MyStatusSection extends StatelessWidget {
           children: [
             Stack(children: [
               const CustomRoundedImageContiner(
-                image: AssetImages.demoImage,
+                image: AssetImages.profileTestImage,
               ),
               Positioned(
                   bottom: 0,
