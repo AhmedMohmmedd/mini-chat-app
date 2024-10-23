@@ -1,4 +1,3 @@
-import 'package:chatdemo/features/auth/presentaion/views/widgets/sign_up_screen_body.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -6,10 +5,6 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
-        child: SignUpScreenBody(),
-      ),
-    );
+    return const Placeholder();
   }
 }
