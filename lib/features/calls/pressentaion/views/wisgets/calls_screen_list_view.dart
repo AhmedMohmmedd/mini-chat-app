@@ -10,6 +10,8 @@ class CallsScreenListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: 7,
       itemBuilder: (context, index) {
         return const Padding(
