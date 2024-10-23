@@ -1,3 +1,4 @@
+import 'package:chatdemo/features/calls/pressentaion/views/calls_screen.dart';
 import 'package:chatdemo/features/home/presentaion/views/widgets/home_screen_body.dart';
 import 'package:chatdemo/features/stauts/pressentaion/views/stutes_screen.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final pages = const [
     HomeScreenBody(),
     StautsScreen(),
-    SizedBox(),
+    CallsScreen(),
   ];
 
   @override
