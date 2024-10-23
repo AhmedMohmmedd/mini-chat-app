@@ -8,11 +8,15 @@ class HomeScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
-          itemCount: 4,
-          itemBuilder: (context, index) {
-            return const CustomChatItem();
-          }),
+      backgroundColor: Colors.white,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 20),
+        child: ListView.builder(
+            itemCount: 4,
+            itemBuilder: (context, index) {
+              return const CustomChatItem();
+            }),
+      ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppColor.primeryColor,
         child: const Icon(

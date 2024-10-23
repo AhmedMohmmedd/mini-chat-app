@@ -9,7 +9,7 @@ class ViewedUpdatesListView extends StatelessWidget {
     return ListView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
-        itemCount: 4,
+        itemCount: 2,
         itemBuilder: (context, index) {
           return const Padding(
             padding:  EdgeInsets.only(bottom:4 ),
