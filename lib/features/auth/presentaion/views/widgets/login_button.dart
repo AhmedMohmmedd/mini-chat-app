@@ -1,4 +1,5 @@
 import 'package:chatdemo/core/shared_widgets/custom_button.dart';
+import 'package:chatdemo/core/theming/app_color.dart';
 import 'package:chatdemo/features/home/presentaion/views/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -14,6 +15,7 @@ class LoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomButton(
+      backgroundColor: AppColor.primeryColor,
       text: 'LogIn',
       func: () {
         if(!emailController.text.contains('@')){
