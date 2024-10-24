@@ -1,3 +1,4 @@
+import 'package:chatdemo/features/chats/presentaion/views/chat_screen.dart';
 import 'package:chatdemo/features/home/presentaion/views/home_screen.dart';
 import 'package:chatdemo/features/splash/presentaion/views/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         textTheme: GoogleFonts.interTextTheme(),
       ),
-      home: const SplashScreen(),
+      home: const ChatScreen(),
     );
   }
 }
