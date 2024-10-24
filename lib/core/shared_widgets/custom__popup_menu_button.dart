@@ -17,7 +17,8 @@ class CustomPopupMenuButton extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
-      elevation: .1,
+      offset: const Offset(30, 50),
+      elevation: .5,
       color: Colors.white,
       onSelected: (MenuOptions result) {
         switch (result) {

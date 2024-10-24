@@ -1,6 +1,5 @@
 import 'package:chatdemo/core/shared_widgets/custom__popup_menu_button.dart';
 import 'package:chatdemo/core/theming/app_styels.dart';
-import 'package:chatdemo/features/profile/presentaion/views/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {

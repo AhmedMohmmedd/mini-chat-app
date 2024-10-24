@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:chatdemo/core/theming/app_color.dart';
 import 'package:chatdemo/core/theming/app_styels.dart';
