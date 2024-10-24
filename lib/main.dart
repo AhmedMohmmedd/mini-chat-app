@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         textTheme: GoogleFonts.interTextTheme(),
       ),
-      home: const ChatScreen(),
+      home: const SplashScreen(),
     );
   }
 }

@@ -14,7 +14,9 @@ class CustomChatAppbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.white,
       title: Row(
         children: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_back)),
+          // IconButton(onPressed: () {
+          //   Navigator.pop(context);
+          // }, icon: const Icon(Icons.arrow_back)),
           CustomRoundedImageContiner(image: image,width: 100,height: 60,),
           const SizedBox(
             width: 5,
