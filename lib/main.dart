@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Chat  App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        textTheme: GoogleFonts.interTextTheme(),
+        // textTheme: GoogleFonts.interTextTheme(),
       ),
       home: const SplashScreen(),
     );
