@@ -1,8 +1,10 @@
 import 'package:chatdemo/core/shared_widgets/custom_button.dart';
+import 'package:chatdemo/features/auth/presentaion/view_model/registercubit/register_cubit.dart';
 import 'package:chatdemo/features/auth/presentaion/views/login_screen.dart';
 import 'package:chatdemo/features/home/presentaion/views/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class RegisterButton extends StatelessWidget {
@@ -35,6 +37,17 @@ class RegisterButton extends StatelessWidget {
             var auth = FirebaseAuth.instance;
             UserCredential newUser = await auth.createUserWithEmailAndPassword(
                 email: emailController.text, password: passwordController.text);
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('Success'),
+              ),
+            );
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const LoginScreen(),
+              ),
+            );
           } on FirebaseException catch (e) {
             if (e.code == 'email-already-in-use') {
               ScaffoldMessenger.of(context).showSnackBar(
@@ -51,22 +64,15 @@ class RegisterButton extends StatelessWidget {
             }
           }
 
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Success'),
-            ),
-          );
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const LoginScreen(),
-            ),
-          );
+          // BlocProvider.of<RegisterCubit>(context).registerUser(
+          //     email: emailController.text, password: passwordController.text);
         }
       },
     );
   }
 }
+
+class AuthBloc {}
 
 displayToastMssg(String msg, BuildContext context) {
   Fluttertoast.showToast(msg: msg);

@@ -49,6 +49,7 @@ dependencies:
   cached_network_image: ^3.4.0
   shared_preferences: ^2.2.3
   firebase_auth: ^5.2.0
+  flutter_bloc: ^8.1.6
 
 dev_dependencies:
   flutter_test:
