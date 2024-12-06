@@ -1,5 +1,7 @@
 import 'package:chatdemo/core/shared_widgets/custom_button.dart';
+import 'package:chatdemo/features/auth/presentaion/views/login_screen.dart';
 import 'package:chatdemo/features/home/presentaion/views/home_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -19,7 +21,7 @@ class RegisterButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomButton(
       text: 'Register',
-      func: () {
+      func: () async {
         if (nameController.text.length < 5) {
           displayToastMssg('Name must be more than 5 characters', context);
         } else if (!emailController.text.contains('@')) {
@@ -29,10 +31,35 @@ class RegisterButton extends StatelessWidget {
         } else if (passwordController.text.length < 8) {
           displayToastMssg('Password must be more than 8 characters', context);
         } else {
+          try {
+            var auth = FirebaseAuth.instance;
+            UserCredential newUser = await auth.createUserWithEmailAndPassword(
+                email: emailController.text, password: passwordController.text);
+          } on FirebaseException catch (e) {
+            if (e.code == 'email-already-in-use') {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Email already in use'),
+                ),
+              );
+            } else {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('something went wrong, please try again later'),
+                ),
+              );
+            }
+          }
+
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Success'),
+            ),
+          );
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const HomeScreen(),
+              builder: (context) => const LoginScreen(),
             ),
           );
         }
